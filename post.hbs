@@ -1,0 +1,36 @@
+{{!< default}}
+
+
+{{#post}}
+  <div name="blog" id="post-page" class="page blog-page">
+  {{> "blog_header_bar"}}
+
+    <div class="page-content">
+      <div class="post-content-container container">
+        <h1 class="post-title">{{title}}</h1>
+          <div class="post-meta">
+            <p class="author">By Eric Hagemann</p>
+             <p class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</p>
+            <div class="tags"><p>In {{tags limit="3" separator=" "}}</p></div>
+          </div>
+         {{#if image}}<img class="featured-image" src="{{image}}" />{{/if}}
+        {{> "share"}}
+        <div class="post-content">{{content}}</div>
+        {{> "share"}}
+      </div>
+
+      {{!-- <div class="author-content-wrapper">
+        <div class="author-content">
+          <div class="author-image"></div>
+
+          <div class="author-info">
+            <h4><a href="www.erichagemann.com">Eric Hagemann, MSc, CSCS</a></h4>
+            <p>Eric is currently the Director of Training at NLPT, a private strength and conditioning facility based in Cambridge, Ontario. He works with and designs programs for a variety of athletes and general fitness clients.</p>
+          </div>
+        </div>
+      </div> --}}
+        {{> "email_subscribe_bar"}}
+    </div>
+  </div>
+
+{{/post}}

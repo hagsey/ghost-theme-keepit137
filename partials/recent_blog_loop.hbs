@@ -1,0 +1,19 @@
+{{#get "posts" limit="5"}}
+  {{#foreach posts}}
+    <a href="{{url}}" data-name="recent-blog" class="col-4">
+      <div class="content-preview-area">
+        {{#if image}}
+        <div class="content-preview-image" style="background-image: url('{{image}}')">
+        {{else}}
+        <div class="content-preview-image" style="background-image: url('/assets/images/blog-image-placeholder.jpg')">
+        {{/if}}
+          <div class="dark-cover"></div>
+          <div class="content-preview-text">
+            <h2 class="blog-title">{{title}}</h3>
+            <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</time>
+          </div>
+        </div>
+      </div>
+    </a>
+  {{/foreach}}
+{{/get}}

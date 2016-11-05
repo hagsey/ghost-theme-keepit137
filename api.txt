@@ -1,0 +1,30 @@
+PUBLISHING TO PODCAST
+
+1. Use tag 'podcast' on posts so they show up on the podcast page
+
+2. Formatting title
+
+    Use: "Ep 23: Title goes here"
+
+PUBLISHING TO RECENT LOOP
+
+1. Use 'blog' and 'podcast' tags on posts
+
+TOPICS
+
+Use the following tags:
+
+'health'
+'food'
+'training'
+'skill'
+'offtopic'
+
+MARKDOWN
+
+Intro quotes: <div class="quote">Quote text here</div>
+
+TODOS:
+
+- Make footer more mobile friendly
+- Fix Hamburger menu

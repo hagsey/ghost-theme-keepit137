@@ -1,0 +1,85 @@
+<div class="topics-wrapper clearfix">
+  <div class="topic-container topic-header" hidden>
+    <div class="topic">
+      <p>Topics</p>
+      <span class="round-arrow"></span>
+    </div>
+  </div>
+
+  <div class="all-topics-container">
+    <div class="topic-container col-5">
+      <div class="topic">
+        <p>Health</p>
+        <span class="round-arrow"></span>
+      </div>
+      <ul class="subtopic-post-list">
+        {{#get "posts" filter="tag:health"}}
+          {{#foreach posts}}
+          <li><a href="{{url}}">{{title}}</a></li>
+          {{/foreach}}
+        {{/get}}
+      </ul>
+    </div>
+
+    <div class="topic-container col-5">
+      <div class="topic clearfix">
+        <p>Food</p>
+        <span class="round-arrow"></span>
+      </div>
+      <ul class="subtopic-post-list">
+        {{#get "posts" filter="tag:food"}}
+          {{#foreach posts}}
+          <li><a href="{{url}}">{{title}}</a></li>
+          {{/foreach}}
+        {{/get}}
+      </ul>
+
+    </div>
+
+    <div class="topic-container col-5">
+      <div class="topic">
+        <p>Training & Sport</p>
+        <span class="round-arrow"></span>
+      </div>
+      <ul class="subtopic-post-list">
+        {{#get "posts" filter="tag:training"}}
+          {{#foreach posts}}
+          <li><a href="{{url}}">{{title}}</a></li>
+          {{/foreach}}
+        {{/get}}
+      </ul>
+
+    </div>
+
+    <div class="topic-container col-5">
+      <div class="topic">
+        <p>Skill Development</p>
+        <span class="round-arrow"></span>
+      </div>
+      <ul class="subtopic-post-list">
+        {{#get "posts" filter="tag:skill"}}
+          {{#foreach posts}}
+          <li><a href="{{url}}">{{title}}</a></li>
+          {{/foreach}}
+        {{/get}}
+      </ul>
+
+    </div>
+
+    <div class="topic-container col-5">
+      <div class="topic">
+        <p>On My Mind</p>
+        <span class="round-arrow"></span>
+      </div>
+      <ul class="subtopic-post-list">
+        {{#get "posts" filter="tag:offtopic"}}
+          {{#foreach posts}}
+          <li><a href="{{url}}">{{title}}</a></li>
+          {{/foreach}}
+        {{/get}}
+      </ul>
+    </div>
+  </div>
+
+</div>
+

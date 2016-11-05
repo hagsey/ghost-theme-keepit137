@@ -1,0 +1,48 @@
+<div class="nav-bar-wrapper">
+
+  <div class="nav-bar container">
+    <div class="left-side-header">
+      <a href="{{@blog.url}}" class="site-title">
+        <h1>Keepit<span>137</span></h1>
+        <h4 class="sub-title">The daily effective dose</h4>
+      </a>
+    </div>
+
+    <div class="hamburger" hidden></div>
+
+    <div class="right-side-header">
+      <div class="nav-bar-links">
+      <i class="fa fa-times-circle" aria-hidden="true"></i>
+        <ul>
+          <li><a class="nav-link" href="/">Home</a></li>
+          <li><a data-page="blog" class="nav-link" href="/blog/">Blog</a></li>
+          <li><a data-page="about" class="nav-link" href="/about/">About</a></li>
+          <li><a data-page="contact" class="nav-link" href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clear-modal-layer" hidden></div>
+
+  <div class="blog-header-bar">
+    <div class="navigate" hidden>
+      <div class="container">
+        <h5>Navigate</h5>
+        <a class="button" href="/blog/">Blog home</a>
+        <a class="button" href="/all-posts/">Archive</a>
+      </div>
+    </div>
+
+    <div class="topics">
+      <div class="container">
+        <h5>Topics</h5>
+        <a class="button button-green" href="/blog/">Show all</a>
+        {{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
+          {{#foreach tags}}
+            <a class="button" href="/tag/{{slug}}">{{name}}</a>
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+  </div>
+</div>

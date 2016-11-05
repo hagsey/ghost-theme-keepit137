@@ -1,0 +1,35 @@
+{{!< default}}
+
+<div id="main-page" class="page">
+  {{> "nav_bar"}}
+
+  <div class="page-header main-page-header">
+    {{> "hero_header"}}
+  </div>
+
+  {{> "email_subscribe_bar"}}
+
+  <div class="page-content">
+
+    <div class="section about-section container clearfix">
+      <div class="section-title"></div>
+      <img src="{{asset 'images/eric.png'}}" alt="Eric's photo">
+      <p>My name is Eric Hagemann, and I’ve never been able to run. Or at least that’s the story I’ve always told myself.</p>
+      <p>Keep It 137 is all about my attempt to run every day for 137 days in a row. It’s a training log, a public accountability project, and a look into the deeper topic of habit formation.</p>
+      <p>If you’ve got a habit you’re trying to form (or break), or if you just want to follow my journey, type your email into the box above and I’ll be sure to keep you up to date.</p>
+      <p class="signature">-Eric</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <h2>Recent Blog Posts</h2>
+      </div>
+      <div class="recent-wrapper">
+        <div class="recent-row margin-row clearfix container">
+          {{> "recent_blog_loop"}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
