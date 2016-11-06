@@ -78,7 +78,25 @@
 
     </script>
     <script type="text/javascript">
+      (function() {
+        var $topics_bar = $("#topics-bar"),
+            $all_topics = $("#all-topics");
 
+        $(window).scroll(function() {
+          if ($(document).scrollTop() > 400) {
+            $topics_bar.addClass('fixed-topic-bar');
+            $all_topics.addClass('fixed-topics');
+          } else {
+            $topics_bar.removeClass('fixed-topic-bar');
+            $all_topics.removeClass('fixed-topics');
+          }
+        });
+      })();
+
+      $("#topics-title").on("click", function() {
+        $("#all-topics").slideToggle();
+        $("#topics-title i").toggleClass("fa-minus-square");
+      });
     </script>
 
     <script type="text/javascript">

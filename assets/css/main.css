@@ -2422,17 +2422,6 @@ COLORS & VARIABLES
 GENERAL
 ==================
 */
-.site-title h1, .site-title h4 {
-  line-height: 1em; }
-.site-title h1 {
-  font-family: "Economica", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase; }
-.site-title span {
-  color: #e8ff00; }
-.site-title h4 {
-  font-family: "Roboto Condensed", Serif; }
-
 .container {
   width: 85%;
   margin: 0 auto; }
@@ -2449,24 +2438,16 @@ p, label {
   line-height: 1.8em;
   color: #333; }
 
-.post-content p,
-.about-content p,
-.contact-content p {
+p {
   margin-bottom: 25px; }
-
-.post-title {
-  display: block;
-  margin-bottom: 0.5em; }
-
-img {
-  margin-bottom: 10px; }
 
 .rotate90 {
   transform: rotate(-90deg); }
 
 .signature {
   margin-top: 20px;
-  font-family: 'Rock Salt', Helvetica, sans-serif; }
+  font-family: 'Rock Salt', Helvetica, sans-serif;
+  display: inline-block; }
 
 .clear-modal-layer {
   position: fixed;
@@ -2504,18 +2485,31 @@ img {
 NAV BAR
 =================
 */
+.site-title h1, .site-title h4 {
+  line-height: 1em; }
+.site-title h1 {
+  font-family: "Economica", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase; }
+.site-title span {
+  color: #e8ff00; }
+.site-title h4 {
+  font-family: "Roboto Condensed", Serif; }
+
 .nav-bar-wrapper {
   position: fixed;
   width: 100%;
   z-index: 2;
-  background: rgba(22, 22, 22, 0.9);
+  top: 0;
+  background: rgba(0, 0, 0, 0.9);
   transition: all 0.3s ease;
   box-sizing: border-box;
-  height: 90px; }
+  height: 80px;
+  border-bottom: 1px solid gray; }
 
 .nav-bar {
   box-sizing: border-box;
-  color: #ffffff;
+  color: #fff;
   position: relative;
   height: 100%; }
 
@@ -2534,17 +2528,6 @@ NAV BAR
   .right-side-header .fa-times-circle {
     display: none; }
 
-.center-header {
-  left: 50%;
-  transform: translate(-50%, -50%); }
-  .center-header h1 {
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    font-family: "Economica", sans-serif;
-    font-size: 3em; }
-  .center-header h1:first-letter {
-    color: #03a9f4; }
-
 .nav-bar-links li {
   display: inline-block;
   margin: 0 0 0 20px; }
@@ -2552,19 +2535,90 @@ NAV BAR
 .nav-link {
   font-family: "Economica", sans-serif;
   font-size: 1.2em;
-  color: #ffffff;
+  color: #fff;
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
   padding: 0 4px; }
+
+.nav-bar .site-title {
+  font-size: 0.8em; }
 
 .active-nav,
 .nav-link:hover,
 .footer-navigation a:hover {
   border-bottom-color: #e8ff00; }
 
-.scroll-nav {
-  padding: 10px 0;
-  background: rgba(0, 0, 0, 0.9); }
+/*
+================
+SUBSCRIBE
+================
+*/
+.subscribe-wrapper {
+  text-align: center;
+  height: 120px;
+  box-sizing: border-box;
+  background: #03a9f4; }
+
+#mc_embed_signup_scroll > * {
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 0.8em; }
+
+#mc_embed_signup {
+  display: inline-block;
+  width: 70%; }
+
+#mc-embedded-subscribe {
+  border: 1px solid #0a0a0a;
+  cursor: pointer;
+  margin: 0 0 0 4px;
+  position: relative;
+  box-sizing: border-box;
+  background: #0a0a0a;
+  color: #ffffff;
+  border-radius: 3px; }
+
+input#mce-EMAIL {
+  border: 1px solid #fff;
+  border-radius: 2px;
+  width: 350px; }
+
+label[for="mce-EMAIL"] {
+  padding-top: 15px;
+  display: block; }
+
+.email-arrow {
+  display: inline-block;
+  width: 42px;
+  height: 55px;
+  background: transparent url(../images/arrow.png) no-repeat;
+  background-size: cover;
+  right: 10px;
+  position: relative; }
+
+/*
+=================
+HERO
+=================
+*/
+.hero-image {
+  float: right;
+  width: 250px;
+  margin-left: 1em; }
+
+.hero-content {
+  box-sizing: border-box; }
+  .hero-content p {
+    margin-bottom: 1em;
+    line-height: 1.35em; }
+
+.hero-subscribe {
+  display: inline-block; }
+  .hero-subscribe #mce-EMAIL {
+    width: 100%;
+    display: inline-block; }
+  .hero-subscribe #mc-embedded-subscribe {
+    display: inline-block; }
 
 .header-social {
   display: block;
@@ -2594,100 +2648,6 @@ NAV BAR
     background-image: url("../images/header-facebook-square.png"); }
 
 /*
-================
-SUBSCRIBE
-================
-*/
-.subscribe-wrapper {
-  border-top: 2px solid #e8ff00;
-  background-color: #e2e2e2; }
-
-.subscribe {
-  padding: 1em 0;
-  position: relative;
-  width: 60%;
-  text-align: center;
-  margin: 0 auto; }
-
-#mc_embed_signup_scroll > * {
-  padding: 8px;
-  box-sizing: border-box;
-  font-size: 0.8em; }
-
-#mc_embed_signup {
-  display: inline-block; }
-
-#mc-embedded-subscribe {
-  border: 1px solid #0a0a0a;
-  cursor: pointer;
-  margin: 0 0 0 4px;
-  position: relative;
-  box-sizing: border-box;
-  background: #0a0a0a;
-  color: #ffffff;
-  border-radius: 3px; }
-
-input#mce-EMAIL {
-  border-style: none;
-  width: 300px; }
-
-label[for="mce-EMAIL"] {
-  padding-top: 15px;
-  display: block; }
-
-.email-arrow {
-  display: inline-block;
-  width: 42px;
-  height: 55px;
-  background: transparent url(../images/arrow.png) no-repeat;
-  background-size: cover;
-  right: 10px;
-  position: relative; }
-
-/*
-=================
-PORTALS
-=================
-*/
-.portal {
-  position: relative;
-  box-sizing: border-box; }
-  .portal img {
-    width: 100%;
-    vertical-align: middle;
-    margin: 0; }
-
-/*
-==================
-CONTENT PREVIEW BOX
-====================
-*/
-.recent-row .content-preview-image {
-  height: 200px;
-  background-color: gray;
-  position: relative;
-  background-size: cover;
-  color: #ffffff; }
-.recent-row .dark-cover {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; }
-.recent-row .content-preview-area {
-  margin-bottom: 5px; }
-.recent-row .content-preview-text {
-  width: 100%; }
-  .recent-row .content-preview-text h2 {
-    font-weight: 700;
-    font-size: 1.5em; }
-.recent-row .first-preview-image {
-  height: 450px; }
-  .recent-row .first-preview-image h2 {
-    font-size: 3em; }
-
-/*
 =================
 PAGE SETTINGS
 =================
@@ -2701,72 +2661,69 @@ PAGE SETTINGS
   box-sizing: border-box; }
 
 .page {
-  background: #ffffff no-repeat;
-  background-size: 100%;
-  background-position: top;
-  background-attachment: fixed; }
-
-.page-content {
-  position: relative;
-  padding-top: 6em;
   background: #ffffff; }
 
-.portal-content,
-.hero-header,
-#main-page .content-preview-text {
+/*
+===================
+MAIN PAGE
+===================
+*/
+.main-page-header {
+  margin-top: 80px;
+  padding: 3em 0 1em 0;
+  height: 400px;
+  box-sizing: border-box;
+  background: #ebebeb; }
+
+.topics-wrapper {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  padding: 0.4em 0;
+  box-sizing: border-box; }
+
+#topics-title {
   position: absolute;
   top: 50%;
   left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  cursor: pointer; }
 
-/*
-=================
-MAIN PAGE
-=================
-*/
-#main-page {
-  background-image: url("../images/run-banner-blue.png"); }
+#all-topics {
+  height: 80px;
+  box-sizing: border-box;
+  padding: 1em 0;
+  background: red; }
 
-#main-page .left-side-header {
-  display: none; }
+#all-topics a {
+  background: yellow;
+  margin: 0 0.4em;
+  padding: 4px;
+  display: inline-block; }
 
-#main-page .nav-bar-wrapper {
-  background: transparent; }
+.fa.fa-plus-square {
+  margin-left: 20px;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
 
-#main-page .page-content {
-  padding-top: 0; }
+.fixed-topic-bar {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 300px;
+  left: 50%;
+  background: transparent;
+  transform: translateX(-50%);
+  border: none;
+  color: #fff; }
 
-.about-section img {
-  float: right;
-  margin-left: 1em;
-  width: 40%;
-  max-width: 350px;
-  min-width: 180px; }
-.about-section p {
-  font-size: 0.9em;
-  line-height: 1.5em;
-  margin-bottom: 1em; }
-
-.nav-bar .site-title {
-  font-size: 0.8em; }
-
-.hero-header .site-title {
-  font-size: 2.5em; }
-  .hero-header .site-title .sub-title {
-    font-size: 0.6em; }
-
-.main-page-header {
-  background: transparent no-repeat;
-  background-size: cover;
-  height: 30em;
-  widows: inherit;
-  position: relative; }
-  .main-page-header * {
-    color: #ffffff; }
-
-.hero-header {
-  width: 100%; }
+.fixed-topics {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 80px; }
 
 /*
 =================
@@ -2818,58 +2775,10 @@ ALL POSTS PAGE
       float: right; }
 
 /*
-=================
-BLOG PAGE
-=================
+===============
+BLOG LOOP
+===============
 */
-#blog-nav {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0; }
-  #blog-nav .nav-bar-wrapper {
-    position: relative; }
-
-/*
-=================
-BLOG HEADER BAR
-===================
-*/
-.blog-page .nav-bar-wrapper {
-  background-color: #3c3b3b; }
-
-.blog-header-bar {
-  background: #eee;
-  box-shadow: 1px 2px 1px #d3d3d3;
-  z-index: 1;
-  position: relative; }
-  .blog-header-bar .navigate,
-  .blog-header-bar .topics {
-    padding: 0.2em 0; }
-  .blog-header-bar .navigate {
-    background-color: #ccc;
-    border-bottom: 1px solid #aeaeae; }
-    .blog-header-bar .navigate .button {
-      border-color: #a2a2a2; }
-  .blog-header-bar .button-green {
-    background: linear-gradient(#3fbcf4, #48a4cf);
-    color: #fff;
-    font-weight: bold; }
-  .blog-header-bar h2 {
-    display: inline-block;
-    background: #e8ff00; }
-  .blog-header-bar h5 {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    font-weight: 700; }
-  .blog-header-bar a {
-    display: inline-block;
-    margin: 4px;
-    font-size: 0.8em;
-    transition-duration: 0s; }
-
 .blog-content .post-preview-area {
   margin: 0 auto 3.5em auto;
   display: block;
@@ -2908,7 +2817,7 @@ BLOG HEADER BAR
 
 /*
 ================
-POST
+POST PAGE
 ================
 */
 #post-page .post-title {
@@ -3090,8 +2999,7 @@ FOOTER
 
 .footer-social .email-arrow {
   display: none; }
-.footer-social a,
-.footer-social .subscribe-wrapper {
+.footer-social a {
   display: block;
   padding: 12px;
   margin-bottom: 20px;
@@ -3129,18 +3037,6 @@ FOOTER
   background-image: url("../images/twitter-white.png"); }
 .footer-social a.facebook:before {
   background-image: url("../images/facebook-white.png"); }
-.footer-social #mce-EMAIL {
-  width: 60%; }
-.footer-social .subscribe {
-  text-align: left;
-  width: 100%;
-  padding-left: 20px;
-  box-sizing: border-box; }
-.footer-social #mc-embedded-subscribe {
-  background-color: #e8ff00;
-  border: none;
-  margin: 4px 0 0 0;
-  color: #0a0a0a; }
 
 .footer-navigation li {
   margin-bottom: 20px;
