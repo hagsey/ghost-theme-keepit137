@@ -1,8 +1,7 @@
 <div id="topics-bar" class="topics-wrapper clearfix">
   <h3 id="topics-title">Topics<i class="fa fa-plus-square" aria-hidden="true"></i></h3>
-
 </div>
-<div id="all-topics" hidden>
-{{#get "tags" limit="all" order="name asc"}}{{tags separator=" "}}{{/get}}
+<div class="all-topics" hidden>
+  <div class="container">{{#get "tags" limit="all" order="name asc"}}{{tags separator=" "}}{{/get}}</div>
 </div>
 
