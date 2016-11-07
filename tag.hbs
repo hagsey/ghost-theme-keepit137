@@ -1,11 +1,17 @@
 {{!< default}}
 
-<div name="blog" id="main-page" class="page">
+
+<div name="blog" id="tag-page" class="page">
   <div class="main-page-header">
     {{> "hero_header"}}
   </div>
   {{> "topics_bar"}}
   <div class="page-content blog-content container">
+    <header class="tag-header">
+      {{#tag}}
+      <h3 class="tag-title">{{name}}</h3>
+      {{/tag}}
+    </header>
     {{> "blog_loop"}}
   </div>
 </div>

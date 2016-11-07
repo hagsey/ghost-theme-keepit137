@@ -1,24 +1,25 @@
-{{#get "posts" include="tags"}}
 {{#foreach posts}}
 
-<div class="post-preview-area clearfix" data-tags="{{#foreach tags}}{{name}} {{/foreach}}">
+<div class="post-preview-area clearfix">
   <a href="{{url}}">
-      <h2 class="post-title">{{title}}</h2>
+    <h2 class="post-title">{{title}}</h2>
     {{#if image}}
     <div class="content-preview-image" style="background-image: url('{{image}}')">
-    {{else}}
-    <div class="content-preview-image" style="background-image: url('/assets/images/blog-image-placeholder.jpg')">
-      {{/if}}
-    <div class="content-preview-area">
-      {{#if meta_description}}
-      <p class="meta-description">{{meta_description}}</p>
       {{else}}
-      <p class="meta-description">{{excerpt words="20"}}...</p>
-      {{/if}}
-      <time class="blog-post-date month" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</time>
-    </div>
-    </div>
-  </a>
-</div>
-{{/foreach}}
-{{/get}}
+      <div class="content-preview-image" style="background-image: url('/assets/images/blog-image-placeholder.jpg')">
+        {{/if}}
+        <div class="content-preview-area">
+          {{#if meta_description}}
+          <p class="meta-description">{{meta_description}}</p>
+          {{else}}
+          <p class="meta-description">{{excerpt words="20"}}...</p>
+          {{/if}}
+          <time class="blog-post-date month" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</time>
+        </div>
+      </div>
+    </a>
+  </div>
+  {{/foreach}}
+  <div class="pagination-container">
+  {{pagination}}
+  </div>

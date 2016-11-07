@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="{{asset 'css/font-awesome-4.6.3/css/font-awesome.min.css'}}" />
   <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
 
+
+
   {{!-- Ghost outputs important style and meta data with this tag --}}
   {{ghost_head}}
 </head>
@@ -48,7 +50,6 @@
           <p class="footer-column-title">Navigation</p>
           <ul class="footer-navigation">
             <li><a class="nav-link" href="/">Home</a></li>
-            {{!-- <li><a href="/podcast/">Podcast</a></li> --}}
             <li><a class="nav-link" href="/blog/">Blog</a></li>
             <li><a class="nav-link" href="/all-posts/">Post archive</a></li>
             <li><a class="nav-link" href="/about/">About</a></li>
@@ -61,8 +62,7 @@
 
     {{ghost_foot}}
 
-    {{!-- PRODUCTION JAVSCRIPT FILE --}}
-    <script type="text/javascript" src="{{asset 'js/all.min.js'}}"></script>
+
 
     {{!-- GOOGLE ANALYTICS --}}
     <script>
@@ -74,42 +74,11 @@
       ga('create', 'UA-86132977-1', 'auto');
       ga('send', 'pageview');
     </script>
-    <script type="text/javascript">
-      $(".post-meta .tags a").addClass("button");
-
-    </script>
-    <script type="text/javascript">
-      (function() {
-        var $topics_bar = $("#topics-bar"),
-        $all_topics = $(".all-topics");
-
-        $(window).scroll(function() {
-          if ($(document).scrollTop() > 430) {
-            $topics_bar.addClass('fixed-topic-bar');
-            $all_topics.addClass('fixed-topics');
-          } else {
-            $topics_bar.removeClass('fixed-topic-bar');
-            $all_topics.removeClass('fixed-topics');
-          }
-        });
-      })();
-
-      $("#topics-title").off().on("click", function() {
-        $(".all-topics").slideToggle();
-        $("#topics-title i").toggleClass("fa-minus-square");
-        $(".clear-modal-layer").toggle();
-
-        $(".clear-modal-layer").off().on("click", function() {
-          $(".all-topics").slideUp();
-          $("#topics-title i").removeClass("fa-minus-square");
-          $(".clear-modal-layer").hide();
-        });
-      });
-    </script>
-
+    {{!-- PRODUCTION JAVSCRIPT FILE --}}
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
     <script type="text/javascript">
 
     </script>
-
   </body>
   </html>
