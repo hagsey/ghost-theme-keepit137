@@ -3,15 +3,13 @@
 
 {{#post}}
   <div name="blog" id="post-page" class="page blog-page">
-  {{> "blog_header_bar"}}
-
     <div class="page-content">
       <div class="post-content-container container">
         <h1 class="post-title">{{title}}</h1>
           <div class="post-meta">
             <p class="author">By Eric Hagemann</p>
              <p class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</p>
-            <div class="tags"><p>In {{tags limit="3" separator=" "}}</p></div>
+            <p class="post-tags">In {{tags limit="3" separator=" "}}</p>
           </div>
          {{#if image}}<img class="featured-image" src="{{image}}" />{{/if}}
         {{> "share"}}

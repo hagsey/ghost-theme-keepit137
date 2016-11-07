@@ -172,7 +172,7 @@ NAV BAR
   width: 100%;
   z-index: 2;
   top: 0;
-  background: rgba(64, 64, 64, 1);
+  background: $background-color-gray;
   transition: all $transition-time ease;
   box-sizing: border-box;
   height: $nav-bar-height;
@@ -324,12 +324,12 @@ HERO
 
 .hero-subscribe {
 
-   #mce-EMAIL {
-    display: inline-block;
-  }
-  #mc-embedded-subscribe {
-    display: inline-block;
-  }
+ #mce-EMAIL {
+  display: inline-block;
+}
+#mc-embedded-subscribe {
+  display: inline-block;
+}
 }
 .hero-signature {
   font-family: 'Rock Salt', Helvetica, sans-serif;
@@ -349,6 +349,10 @@ PAGE SETTINGS
 }
 .page {
   background: #ffffff;
+}
+.page-content {
+  margin-top: $nav-bar-height;
+  padding-top: 15px;
 }
 /*
 ===================
@@ -386,14 +390,17 @@ MAIN PAGE
   box-sizing: border-box;
   top: $nav-bar-height;
   padding: 1em 0;
-  background: white;
+  background: $theme-color-gray;
   z-index: 2;
-  box-shadow: 0 2px 3px 0px #ababab;
 }
 .all-topics a {
   margin: 0.5em;
-  color: $theme-color-highlight-2;
-  display: block;
+  color: $theme-color-highlight;
+  background: $background-color-gray;
+  padding: 0.5em;
+  border-radius: 4px;
+  display: inline-block;
+
 }
 .fa.fa-plus-square {
   margin-left: 20px;
@@ -419,6 +426,7 @@ MAIN PAGE
   width: 100%;
   z-index: 2;
   top: $nav-bar-height;
+  box-shadow: 0 2px 3px 0px #ababab;
 }
 /*
 =================
@@ -489,8 +497,7 @@ BLOG LOOP
 */
 
 .blog-content {
-  margin-top: $nav-bar-height;
-  padding-top: 15px;
+
   .post-preview-area {
     margin: 0 auto 3.5em auto;
     display: block;
@@ -613,18 +620,14 @@ POST PAGE
     font-weight: bold;
     font-size: 1.2em;
   }
-  .tags {
-    a {
-      font-family: Helvetica, sans-serif;
-      padding: 0.3em;
-      font-size: 0.8em;
-      text-transform: capitalize;
-      transition: none;
-      margin: 0 0.3em;
-    }
-    a:hover {
-      text-decoration: none;
-    }
+}
+.post-tags {
+  a {
+    padding: 0.5em;
+    background: $theme-color-gray;
+    font-size: 0.8em;
+    border-radius: 3px;
+    text-transform: capitalize;
   }
 }
 
@@ -649,8 +652,6 @@ AUTHOR
 .author-image,
 .author-info {
   vertical-align: middle;
-}
-.author-image {
 }
 .author-image {
   display: inline-block;

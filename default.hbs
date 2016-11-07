@@ -29,6 +29,7 @@
 
 <body>
   <div class="site-wrapper">
+    {{> "nav_bar"}}
 
     {{{body}}}
 
@@ -80,7 +81,7 @@
     <script type="text/javascript">
       (function() {
         var $topics_bar = $("#topics-bar"),
-            $all_topics = $(".all-topics");
+        $all_topics = $(".all-topics");
 
         $(window).scroll(function() {
           if ($(document).scrollTop() > 430) {
