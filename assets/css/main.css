@@ -2723,7 +2723,8 @@ MAIN PAGE
   background: #3c3b3b;
   padding: 0.5em;
   border-radius: 4px;
-  display: inline-block; }
+  display: inline-block;
+  font-size: 0.9em; }
 
 .fa.fa-plus-square {
   margin-left: 20px;
@@ -3170,7 +3171,10 @@ BREAK POINTS
   .blog-content .post-preview-area .post-title {
     font-size: 1.1em; }
   .blog-content .post-preview-area .content-preview-area {
-    padding: 0; } }
+    padding: 0; }
+
+  .all-topics a {
+    font-size: 0.8em; } }
 @media (max-width: 460px) {
   input#mce-EMAIL {
     width: 250px; } }

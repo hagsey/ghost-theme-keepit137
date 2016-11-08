@@ -412,6 +412,7 @@ MAIN PAGE
   padding: 0.5em;
   border-radius: 4px;
   display: inline-block;
+  font-size: 0.9em;
 
 }
 .fa.fa-plus-square {
@@ -977,6 +978,9 @@ BREAK POINTS
         padding: 0;
       }
     }
+  }
+  .all-topics a {
+    font-size: 0.8em;
   }
 
 }
