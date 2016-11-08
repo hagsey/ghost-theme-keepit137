@@ -2,18 +2,17 @@
 
 {{> "nav_bar"}}
 <div name="blog" class="page blog-page">
-{{> "blog_header_bar"}}
   <div class="page-content">
     <div class="blog-content all-posts container clearfix">
-    <h2>Archive</h2>
-    {{#get "posts"}}
+      <h2>Archive</h2>
+      {{#get "posts"}}
       {{#foreach posts}}
-        <div class="all-post-container clearfix">
+      <div class="all-post-container clearfix">
         <a href="{{url}}">{{title}}</a>
-         <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</time>
-        </div>
+        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</time>
+      </div>
       {{/foreach}}
-    {{/get}}
+      {{/get}}
     </div>
     {{> "email_subscribe_bar"}}
   </div>
