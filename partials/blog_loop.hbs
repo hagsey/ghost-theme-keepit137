@@ -8,16 +8,17 @@
       <div class="content-preview-image" style="background-image: url('/assets/images/blog-image-placeholder.jpg')">
         {{/if}}
       </div>
+    </a>
       <div class="content-preview-area">
-        <h2 class="post-title">{{title}}</h2>
+        <a href="{{url}}"><h2 class="post-title">{{title}}</h2></a>
+        <time class="blog-post-date month" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</time>
         {{#if meta_description}}
         <p class="meta-description">{{meta_description}}</p>
         {{else}}
-        <p class="meta-description">{{excerpt words="15"}}...</p>
+        <p class="meta-description">{{excerpt words="12"}}...</p>
         {{/if}}
-        <time class="blog-post-date month" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</time>
+        <div class="preview-tags">{{#get "tags" limit="all" order="name asc"}}{{tags separator=" "}}{{/get}}</div>
       </div>
-    </a>
   </div>
   {{/foreach}}
   <div class="pagination-container">

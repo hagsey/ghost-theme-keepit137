@@ -520,12 +520,16 @@ BLOG LOOP
 
 .blog-content {
   .post-preview-area {
-    margin: 0 auto 3.5em auto;
+    margin: 0 auto;
+    padding-bottom: 2em;
     display: block;
     max-width: 1000px;
     height: 225px;
     background: #fff;
-    box-shadow: 1px 1px 2px 1px #d4d4d4;
+  }
+  .post-preview-area + .post-preview-area {
+    border-top: 1px solid $theme-color-gray;
+    padding-top: 2em;
   }
   .content-preview-image {
     vertical-align: top;
@@ -542,14 +546,14 @@ BLOG LOOP
     width: 67%;
     padding-left: 1em;
   }
-  .post-title,
   .meta-description,
   .blog-post-date {
-    margin-bottom: 0.2em;
+    margin-bottom: 1em;
     display: block;
   }
   .post-title {
     color: $theme-color-dark;
+    margin-bottom: 0;
   }
   .meta-description {
     line-height: 1.25em;
@@ -559,8 +563,16 @@ BLOG LOOP
     font-family: $font-text;
     font-style: italic;
     opacity: 0.5;
-    margin-bottom: 0;
   }
+}
+.preview-tags a {
+  font-size: 0.9em;
+  color: $theme-color-highlight;
+  background: $background-color-gray;
+  border-radius: 3px;
+  padding: 3px;
+  display: inline-block;
+  margin: 1px;
 }
 .pagination-container {
   text-align: center;
@@ -656,7 +668,6 @@ POST PAGE
 .post-tags {
   a {
     padding: 0.5em;
-    background: $theme-color-gray;
     font-size: 0.8em;
     border-radius: 3px;
     text-transform: capitalize;
@@ -672,13 +683,14 @@ TAG
 .tag-header {
   width: 100%;
   text-align: center;
-  margin: 1em 0;
+  margin-bottom: 1em;
+  background: $background-color-gray;
   .tag-title {
-    background: $background-color-gray;
     color: $theme-color-highlight;
     padding: 7px;
     border-radius: 4px;
     text-transform: capitalize;
+    font-size: 1.1em;
     display: inline-block;
   }
 }
@@ -979,8 +991,9 @@ BREAK POINTS
       }
     }
   }
-  .all-topics a {
-    font-size: 0.8em;
+  .all-topics a,
+  .preview-tags a {
+    font-size: 0.7em;
   }
 
 }
@@ -999,15 +1012,18 @@ BREAK POINTS
   }
   .blog-content {
     .post-preview-area {
-      margin-bottom: 1.5em;
-      height: 125px;
+      margin-bottom: 0;
+      height: auto;
       .post-title {
+        margin-top: 0.3em;
       }
       .content-preview-image {
-        min-width: 125px;
+        min-width: 100%;
+        height: 200px;
+        width: 100%;
       }
       .content-preview-area {
-        width: calc(100% - 130px);
+        width: 100%;
       }
       .meta-description,
       .blog-post-date {

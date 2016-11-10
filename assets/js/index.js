@@ -33,11 +33,9 @@
       if ($(document).scrollTop() > 430) {
         $topics_bar.addClass('fixed-topic-bar');
         $all_topics.addClass('fixed-topics');
-        $tag_title.addClass('fixed-tag-title').appendTo($topics_bar);
       } else {
         $topics_bar.removeClass('fixed-topic-bar');
         $all_topics.removeClass('fixed-topics');
-        $tag_title.removeClass('fixed-tag-title').appendTo($tag_header);
       }
     });
   })();

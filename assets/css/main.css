@@ -2816,12 +2816,15 @@ BLOG LOOP
 ===============
 */
 .blog-content .post-preview-area {
-  margin: 0 auto 3.5em auto;
+  margin: 0 auto;
+  padding-bottom: 2em;
   display: block;
   max-width: 1000px;
   height: 225px;
-  background: #fff;
-  box-shadow: 1px 1px 2px 1px #d4d4d4; }
+  background: #fff; }
+.blog-content .post-preview-area + .post-preview-area {
+  border-top: 1px solid #ebebeb;
+  padding-top: 2em; }
 .blog-content .content-preview-image {
   vertical-align: top;
   display: inline-block;
@@ -2835,21 +2838,29 @@ BLOG LOOP
   box-sizing: border-box;
   width: 67%;
   padding-left: 1em; }
-.blog-content .post-title,
 .blog-content .meta-description,
 .blog-content .blog-post-date {
-  margin-bottom: 0.2em;
+  margin-bottom: 1em;
   display: block; }
 .blog-content .post-title {
-  color: #0a0a0a; }
+  color: #0a0a0a;
+  margin-bottom: 0; }
 .blog-content .meta-description {
   line-height: 1.25em;
   margin-bottom: 0.4em; }
 .blog-content .blog-post-date {
   font-family: "Source Sans Pro", serif;
   font-style: italic;
-  opacity: 0.5;
-  margin-bottom: 0; }
+  opacity: 0.5; }
+
+.preview-tags a {
+  font-size: 0.9em;
+  color: #e8ff00;
+  background: #3c3b3b;
+  border-radius: 3px;
+  padding: 3px;
+  display: inline-block;
+  margin: 1px; }
 
 .pagination-container {
   text-align: center;
@@ -2928,7 +2939,6 @@ POST PAGE
 
 .post-tags a {
   padding: 0.5em;
-  background: #ebebeb;
   font-size: 0.8em;
   border-radius: 3px;
   text-transform: capitalize; }
@@ -2941,13 +2951,14 @@ TAG
 .tag-header {
   width: 100%;
   text-align: center;
-  margin: 1em 0; }
+  margin-bottom: 1em;
+  background: #3c3b3b; }
   .tag-header .tag-title {
-    background: #3c3b3b;
     color: #e8ff00;
     padding: 7px;
     border-radius: 4px;
     text-transform: capitalize;
+    font-size: 1.1em;
     display: inline-block; }
 
 /*
@@ -3173,8 +3184,9 @@ BREAK POINTS
   .blog-content .post-preview-area .content-preview-area {
     padding: 0; }
 
-  .all-topics a {
-    font-size: 0.8em; } }
+  .all-topics a,
+  .preview-tags a {
+    font-size: 0.7em; } }
 @media (max-width: 460px) {
   input#mce-EMAIL {
     width: 250px; } }
@@ -3194,12 +3206,16 @@ BREAK POINTS
     margin-bottom: 0.7em; }
 
   .blog-content .post-preview-area {
-    margin-bottom: 1.5em;
-    height: 125px; }
+    margin-bottom: 0;
+    height: auto; }
+    .blog-content .post-preview-area .post-title {
+      margin-top: 0.3em; }
     .blog-content .post-preview-area .content-preview-image {
-      min-width: 125px; }
+      min-width: 100%;
+      height: 200px;
+      width: 100%; }
     .blog-content .post-preview-area .content-preview-area {
-      width: calc(100% - 130px); }
+      width: 100%; }
     .blog-content .post-preview-area .meta-description,
     .blog-content .post-preview-area .blog-post-date {
       font-size: 0.8em; } }
