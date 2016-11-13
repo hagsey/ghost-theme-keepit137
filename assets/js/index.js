@@ -19,41 +19,49 @@
     $el.html(new_paragraph);
   })();
 
+  //Hide posts with tag 'daily-log'
+
+  $("#main-page main .post-preview-area").filter(function(i) {
+    return $(this).attr('data-tags').split(' ').indexOf('daily-log') !== -1;
+  })
+  .css("display", "none");
+
+
+
+
   //Replace subscribe text in footer
 
-  $(".site-footer").find("label[for='mce-EMAIL']").text("Subscribe and don't miss a thing.");
+  // (function() {
+  //   var $topics_bar = $("#topics-bar"),
+  //   $all_topics = $(".all-topics"),
+  //   $tag_header = $(".tag-header"),
+  //   $tag_title = $(".tag-title") || "";
 
-  (function() {
-    var $topics_bar = $("#topics-bar"),
-    $all_topics = $(".all-topics"),
-    $tag_header = $(".tag-header"),
-    $tag_title = $(".tag-title") || "";
+  //   $(window).scroll(function() {
+  //     if ($(document).scrollTop() > 430) {
+  //       $topics_bar.addClass('fixed-topic-bar');
+  //       $all_topics.addClass('fixed-topics');
+  //     } else {
+  //       $topics_bar.removeClass('fixed-topic-bar');
+  //       $all_topics.removeClass('fixed-topics');
+  //     }
+  //   });
+  // })();
 
-    $(window).scroll(function() {
-      if ($(document).scrollTop() > 430) {
-        $topics_bar.addClass('fixed-topic-bar');
-        $all_topics.addClass('fixed-topics');
-      } else {
-        $topics_bar.removeClass('fixed-topic-bar');
-        $all_topics.removeClass('fixed-topics');
-      }
-    });
-  })();
+  // $("#topics-title").off().on("click", function() {
+  //   $(".all-topics").slideToggle(200);
+  //   $("#topics-title i").toggleClass("fa-minus-square");
+  //   $(".clear-modal-layer").toggle();
 
-  $("#topics-title").off().on("click", function() {
-    $(".all-topics").slideToggle(200);
-    $("#topics-title i").toggleClass("fa-minus-square");
-    $(".clear-modal-layer").toggle();
+  //   $(".clear-modal-layer").off().on("click", function() {
+  //     $(".all-topics").slideUp(200);
+  //     $("#topics-title i").removeClass("fa-minus-square");
+  //     $(".clear-modal-layer").hide();
+  //   });
+  // });
 
-    $(".clear-modal-layer").off().on("click", function() {
-      $(".all-topics").slideUp(200);
-      $("#topics-title i").removeClass("fa-minus-square");
-      $(".clear-modal-layer").hide();
-    });
-  });
-
-  if ($("#tag-page").length === 1) {
-    $(window).scrollTop(430);
-  }
+  // if ($("#tag-page").length === 1) {
+  //   $(window).scrollTop(430);
+  // }
 
 

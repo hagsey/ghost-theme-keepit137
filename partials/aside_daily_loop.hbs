@@ -1,0 +1,13 @@
+{{#get "posts" limit="all" filter="tag:daily-log"}}
+{{#foreach posts}}
+<div class="post-preview-area">
+  <div class="content-preview-image" style="background-image: url('{{image}}')" /></div>
+  <div class="content-preview-area">
+  <a class="post-title" href="{{url}}">{{title}}</a>
+    <time class="blog-post-date month" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</time>
+  </div>
+
+</div>
+{{/foreach}}
+{{/get}}
+

@@ -1,26 +1,58 @@
-{{#foreach posts}}
+<main>
+  {{!-- {{#get "posts" filter="tag:blog"}} --}}
+  {{#foreach posts}}
+  <div class="post-preview-area clearfix" data-tags="{{#foreach tags}}{{slug}} {{/foreach}}">
+    <a href="{{url}}">
+      <h2 class="post-title">{{title}}</h2>
+      <time class="blog-post-date month" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</time>
+      {{#if image}}
+      <div class="content-preview-image" style="background-image: url('{{image}}')">
+        {{else}}
+        <div class="content-preview-image" style="background-image: url('/assets/images/blog-image-placeholder.jpg')">
+          {{/if}}
+        </div>
+      </a>
 
-<div class="post-preview-area clearfix">
-  <a href="{{url}}">
-    {{#if image}}
-    <div class="content-preview-image" style="background-image: url('{{image}}')">
-      {{else}}
-      <div class="content-preview-image" style="background-image: url('/assets/images/blog-image-placeholder.jpg')">
-        {{/if}}
-      </div>
-    </a>
       <div class="content-preview-area">
-        <a href="{{url}}"><h2 class="post-title">{{title}}</h2></a>
-        <time class="blog-post-date month" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</time>
         {{#if meta_description}}
         <p class="meta-description">{{meta_description}}</p>
         {{else}}
-        <p class="meta-description">{{excerpt words="12"}}...</p>
+        <p class="meta-description">{{excerpt words="32"}}...</p>
         {{/if}}
-        <div class="preview-tags">{{#get "tags" limit="all" order="name asc"}}{{tags separator=" "}}{{/get}}</div>
+        {{!--  --}}
+        <div class="preview-tags">{{tags separator=" "}}</div>
       </div>
-  </div>
-  {{/foreach}}
-  <div class="pagination-container">
-    {{pagination}}
-  </div>
+    </div>
+    {{/foreach}}
+    {{!-- {{/get}} --}}
+
+    <div class="pagination-container">
+      {{pagination}}
+    </div>
+  </main>
+
+  <aside>
+    <section>
+      <h2 class="section-title">New to the site?</h2>
+      <p>Start here</p>
+    </section>
+    <section class="loop-section">
+      <h2 class="section-title">Essential reading</h2>
+      {{> "aside_featured_loop"}}
+    </section>
+    <section class="topics-section">
+      <h2 class="section-title">Topics</h2>
+      {{#get "tags" limit="all" order="name asc" include="count.posts"}}
+      {{#foreach tags}}
+      <a href="{{url}}">{{name}} ({{count.posts}})</a>
+      {{/foreach}}
+      {{/get}}
+    </section>
+    <section class="loop-section">
+      <h2 class="section-title">Daily running log</h2>
+      <div class="overflow-loop-content">
+        {{> "aside_daily_loop"}}
+      </div>
+    </section>
+
+  </aside>

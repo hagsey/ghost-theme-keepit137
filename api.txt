@@ -1,30 +1,12 @@
-PUBLISHING TO PODCAST
+PUBLISHING
 
-1. Use tag 'podcast' on posts so they show up on the podcast page
+1. The first tag in any post specifies its role and its visibility
 
-2. Formatting title
+PUBLISHING TO BLOG
 
-    Use: "Ep 23: Title goes here"
+1. The first tag in the post must be 'blog' - JS hides any post in loop without the 'blog' tag
 
-PUBLISHING TO RECENT LOOP
 
-1. Use 'blog' and 'podcast' tags on posts
+PUBLISHING TO DAILY LOG
 
-TOPICS
-
-Use the following tags:
-
-'health'
-'food'
-'training'
-'skill'
-'offtopic'
-
-MARKDOWN
-
-Intro quotes: <div class="quote">Quote text here</div>
-
-TODOS:
-
-- Make footer more mobile friendly
-- Fix Hamburger menu
+1. The first tag in the post must be 'daily log' for it to show up on sidebar
