@@ -51,17 +51,17 @@ $facebook: #3b5998;
 $google: #dd4b39;
 $mail: #ffeb3b;
 
-// Theme colors
+// colors
 
-$theme-color-highlight: #e8ff00;
-$theme-color-highlight-2: #03a9f4;
-$theme-color-dark: #0a0a0a;
-$theme-color-gray: #ebebeb;
-$theme-color-light: #ffffff;
-$theme-color-aside-gray: #5d5d5d;
-$text-link-color: #03a9f4;
-$background-color-gray: #3c3b3b;
-$nav-text-color: #fff;
+$color-highlight: #e8ff00;
+$color-highlight-2: #03a9f4;
+$color-dark: #0a0a0a;
+$color-gray: #ebebeb;
+$color-light: #ffffff;
+$color-aside-gray: #5d5d5d;
+$color-link: #03a9f4;
+$color-bg-gray: #3c3b3b;
+$color-nav-text: #fff;
 
 // Fonts
 
@@ -127,7 +127,7 @@ p {
   background: (0, 0, 0, 0);
 }
 .active {
-  background: $theme-color-highlight !important;
+  background: $color-highlight !important;
 }
 .button {
   color: #333;
@@ -149,37 +149,35 @@ p {
 .button:hover {
   background: linear-gradient(#f0eeee, #d6d5d5);
 }
-
 /*
 =================
 NAV BAR
 =================
 */
 .site-title {
-  h1, h4 {
-    line-height: 1em;
-  }
-  h1 {
-    font-family: $font-title;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 3em;
-  }
-  span {
-    color: $theme-color-highlight;
-  }
-  h4 {
-    font-family: $font-header;
-
-  }
+  font-family: $font-title;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 2em;
 }
+.site-title, .sub-title {
+  line-height: 1em;
+}
+span {
+  color: $color-highlight;
+}
+.sub-title {
+  font-family: $font-header;
+  font-size: 0.8em;
+}
+
 
 .nav-bar-wrapper {
   position: fixed;
   width: 100%;
   z-index: 2;
   top: 0;
-  background: $background-color-gray;
+  background: $color-bg-gray;
   transition: all $transition-time ease;
   box-sizing: border-box;
   height: $nav-bar-height;
@@ -187,7 +185,7 @@ NAV BAR
 }
 .nav-bar {
   box-sizing: border-box;
-  color: $nav-text-color;
+  color: $color-nav-text;
   position: relative;
   height: 100%;
 }
@@ -212,16 +210,15 @@ NAV BAR
 .nav-link {
   font-family: $font-title;
   font-size: 1.2em;
-  color: $nav-text-color;
+  color: $color-nav-text;
   border-bottom: 2px solid transparent;
   transition: all $transition-time ease;
   padding: 0 4px;
 }
-.nav-bar .site-title {font-size: 0.8em;}
 .active-nav,
 .nav-link:hover,
 .footer-navigation a:hover {
-  border-bottom-color: $theme-color-highlight;
+  border-bottom-color: $color-highlight;
 }
 
 /*
@@ -233,7 +230,7 @@ SUBSCRIBE
   text-align: center;
   height: $email-subsc-height;
   box-sizing: border-box;
-  background: $theme-color-highlight-2
+  background: $color-highlight-2
 }
 #mc_embed_signup_scroll > * {
   padding: 8px;
@@ -249,13 +246,13 @@ SUBSCRIBE
   width: 100%;
 }
 #mc-embedded-subscribe {
-  border: 1px solid $theme-color-dark;
+  border: 1px solid $color-dark;
   cursor: pointer;
   margin: 0 0 0 4px;
   position: relative;
   box-sizing: border-box;
-  background: $theme-color-dark;
-  color: $theme-color-light;
+  background: $color-dark;
+  color: $color-light;
   border-radius: 3px;
 }
 input#mce-EMAIL {
@@ -312,7 +309,7 @@ MAIN PAGE
   padding: 2em 0 1em 0;
   height: $hero-height-full;
   box-sizing: border-box;
-  background: $theme-color-gray;
+  background: $color-gray;
 }
 .topics-wrapper {
   position: absolute;
@@ -337,12 +334,12 @@ MAIN PAGE
   box-sizing: border-box;
   top: $nav-bar-height;
   padding: 1em 0;
-  background: $theme-color-gray;
+  background: $color-gray;
   z-index: 2;
 }
 .all-topics a {
-  color: $theme-color-highlight;
-  background: $background-color-gray;
+  color: $color-highlight;
+  background: $color-bg-gray;
   padding: 0.5em;
   border-radius: 4px;
   display: inline-block;
@@ -365,7 +362,7 @@ MAIN PAGE
   background: transparent;
   transform: translateX(-50%);
   border: none;
-  color: $nav-text-color;
+  color: $color-nav-text;
   box-shadow: none;
 }
 .fixed-topics {
@@ -491,7 +488,7 @@ ALL POSTS PAGE
     display: block;
     padding: 12px 0;
     a {
-      color: $text-link-color;
+      color: $color-link;
       cursor: pointer;
       font-weight: bold;
       float: left;
@@ -523,11 +520,13 @@ BLOG LOOP
     float: right;
   }
   .post-preview-area {
-    margin: 0 auto;
+    margin: 0 auto 2em auto;
     padding-bottom: 2em;
     display: block;
     max-width: 1000px;
     background: #fff;
+    border-bottom: 1px solid $color-gray;
+
   }
   .content-preview-image {
     margin: 0;
@@ -544,19 +543,19 @@ BLOG LOOP
     display: block;
   }
   .post-title {
-    color: $theme-color-dark;
+    color: $color-dark;
     margin-bottom: 0;
   }
   .blog-post-date {
     font-family: $font-text;
     font-style: italic;
-    color: $theme-color-aside-gray;
+    color: $color-aside-gray;
   }
 }
 .preview-tags a {
   font-size: 0.9em;
-  color: $theme-color-highlight;
-  background: $background-color-gray;
+  color: $color-highlight;
+  background: $color-bg-gray;
   border-radius: 1px;
   padding: 0.4em;
   display: inline-block;
@@ -571,7 +570,7 @@ BLOG LOOP
     // font-family: $font-header;
   }
   a {
-    color: $theme-color-highlight-2;
+    color: $color-highlight-2;
   }
 }
 
@@ -581,11 +580,14 @@ ASIDE
 ================
 */
 aside .topics-section {
+  p {
+    margin: 0;
+    padding: 0;
+  }
   a {
-    display: block;
-    padding: 0.3em;
+    display: inline-block;
     font-family: $font-header;
-    color: $theme-color-aside-gray;
+    color: $color-aside-gray;
     margin: 0.4em 0;
   }
 }
@@ -595,9 +597,36 @@ aside .section-title {
 aside section {
   margin-bottom: 2em;
 }
+aside .section-content {
+  padding-left: 0.5em;
+}
+i.site-title {
+  font-size: 1em;
+  font-style: normal;
+}
+.start-here-button {
+  background: #eaeaea;
+  display: block;
+  padding: 1em 0.5em;
+  border-radius: 3px;
+  h3, h4 {
+    color: $color-highlight-2;
+    line-height: 1em;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 0.8em;
+  }
+  h4{
+    color: $color-bg-gray;
+    line-height: 1.2em;
+  }
+  span {
+    color: $color-highlight-2;
+  }
+}
 .loop-section {
   .post-preview-area {
-    border-bottom: 1px solid $theme-color-gray;
+    border-bottom: 1px solid $color-gray;
     padding: 0.3em;
   }
   .overflow-loop-content {
@@ -605,12 +634,12 @@ aside section {
     overflow: scroll;
   }
   .content-preview-image {
-    height: 75px;
-    width: 75px;
+    height: 60px;
+    width: 60px;
     display: inline-block;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0 0.5em 0 0;
+    margin: 0 5px 0 0;
     vertical-align: top;
   }
   .post-title {
@@ -620,13 +649,13 @@ aside section {
   }
   .content-preview-area {
     display: inline-block;
+    width: calc(100% - 70px);
   }
 
   .blog-post-date {
     font-size: 0.7em;
   }
 }
-
 
 /*
 ================
@@ -643,7 +672,7 @@ POST PAGE
   width: 70%;
   max-width: 1000px;
   a {
-    color: $text-link-color;
+    color: $color-link;
     cursor: pointer;
   }
   a:hover {
@@ -724,9 +753,9 @@ TAG
   width: 100%;
   text-align: center;
   margin-bottom: 1em;
-  background: $background-color-gray;
+  background: $color-bg-gray;
   .tag-title {
-    color: $theme-color-highlight;
+    color: $color-highlight;
     padding: 7px;
     border-radius: 4px;
     text-transform: capitalize;
@@ -783,7 +812,7 @@ SHARE
     border-color: $mail;
   }
   a:hover {
-    color: $theme-color-light;
+    color: $color-light;
     border: none;
   }
   a[class*='twitter']:hover {
@@ -812,7 +841,7 @@ FOOTER
 =================
 */
 .site-footer-wrapper {
-  background: $background-color-gray;
+  background: $color-bg-gray;
   padding: 30px 0;
   .footer-column-title {
     color: #fff;
@@ -832,7 +861,7 @@ FOOTER
     background: rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
     border-top: transparent;
-    color: $theme-color-light;
+    color: $color-light;
     cursor: arrow;
     border-radius: 4px;
   }
@@ -881,7 +910,7 @@ FOOTER
     text-align: center;
   }
   a {
-    color: $theme-color-light;
+    color: $color-light;
   }
 }
 

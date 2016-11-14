@@ -2490,17 +2490,21 @@ p {
 NAV BAR
 =================
 */
-.site-title h1, .site-title h4 {
-  line-height: 1em; }
-.site-title h1 {
+.site-title {
   font-family: "Economica", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 3em; }
-.site-title span {
+  font-size: 2em; }
+
+.site-title, .sub-title {
+  line-height: 1em; }
+
+span {
   color: #e8ff00; }
-.site-title h4 {
-  font-family: "Roboto Condensed", Serif; }
+
+.sub-title {
+  font-family: "Roboto Condensed", Serif;
+  font-size: 0.8em; }
 
 .nav-bar-wrapper {
   position: fixed;
@@ -2545,9 +2549,6 @@ NAV BAR
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
   padding: 0 4px; }
-
-.nav-bar .site-title {
-  font-size: 0.8em; }
 
 .active-nav,
 .nav-link:hover,
@@ -2819,11 +2820,12 @@ BLOG LOOP
   width: 30%;
   float: right; }
 .blog-content .post-preview-area {
-  margin: 0 auto;
+  margin: 0 auto 2em auto;
   padding-bottom: 2em;
   display: block;
   max-width: 1000px;
-  background: #fff; }
+  background: #fff;
+  border-bottom: 1px solid #ebebeb; }
 .blog-content .content-preview-image {
   margin: 0;
   width: 100%;
@@ -2865,9 +2867,11 @@ BLOG LOOP
 ASIDE
 ================
 */
+aside .topics-section p {
+  margin: 0;
+  padding: 0; }
 aside .topics-section a {
-  display: block;
-  padding: 0.3em;
+  display: inline-block;
   font-family: "Roboto Condensed", Serif;
   color: #5d5d5d;
   margin: 0.4em 0; }
@@ -2878,6 +2882,30 @@ aside .section-title {
 aside section {
   margin-bottom: 2em; }
 
+aside .section-content {
+  padding-left: 0.5em; }
+
+i.site-title {
+  font-size: 1em;
+  font-style: normal; }
+
+.start-here-button {
+  background: #eaeaea;
+  display: block;
+  padding: 1em 0.5em;
+  border-radius: 3px; }
+  .start-here-button h3, .start-here-button h4 {
+    color: #03a9f4;
+    line-height: 1em;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 0.8em; }
+  .start-here-button h4 {
+    color: #3c3b3b;
+    line-height: 1.2em; }
+  .start-here-button span {
+    color: #03a9f4; }
+
 .loop-section .post-preview-area {
   border-bottom: 1px solid #ebebeb;
   padding: 0.3em; }
@@ -2885,19 +2913,20 @@ aside section {
   max-height: 300px;
   overflow: scroll; }
 .loop-section .content-preview-image {
-  height: 75px;
-  width: 75px;
+  height: 60px;
+  width: 60px;
   display: inline-block;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0 0.5em 0 0;
+  margin: 0 5px 0 0;
   vertical-align: top; }
 .loop-section .post-title {
   margin-bottom: 0.5em;
   display: block;
   font-family: "Roboto Condensed", Serif; }
 .loop-section .content-preview-area {
-  display: inline-block; }
+  display: inline-block;
+  width: calc(100% - 70px); }
 .loop-section .blog-post-date {
   font-size: 0.7em; }
 

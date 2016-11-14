@@ -17,7 +17,7 @@
         {{#if meta_description}}
         <p class="meta-description">{{meta_description}}</p>
         {{else}}
-        <p class="meta-description">{{excerpt words="32"}}...</p>
+        <p class="meta-description">{{excerpt words="50"}}...</p>
         {{/if}}
         {{!--  --}}
         <div class="preview-tags">{{tags separator=" "}}</div>
@@ -33,26 +33,34 @@
 
   <aside>
     <section>
-      <h2 class="section-title">New to the site?</h2>
-      <p>Start here</p>
-    </section>
-    <section class="loop-section">
-      <h2 class="section-title">Essential reading</h2>
-      {{> "aside_featured_loop"}}
-    </section>
-    <section class="topics-section">
-      <h2 class="section-title">Topics</h2>
-      {{#get "tags" limit="all" order="name asc" include="count.posts"}}
-      {{#foreach tags}}
-      <a href="{{url}}">{{name}} ({{count.posts}})</a>
-      {{/foreach}}
-      {{/get}}
-    </section>
-    <section class="loop-section">
-      <h2 class="section-title">Daily running log</h2>
-      <div class="overflow-loop-content">
-        {{> "aside_daily_loop"}}
-      </div>
-    </section>
+      <div class="section-content start">
+        <a href="/start-here/" class="start-here-button">
+          <h3>First visit?</h3>
+          <h4><i class="site-title">Keepit<span>137</span></i> is about peeling back the layers of habit formation.</h4>
+          <h4>Click to learn more the project.</h4>
+        </a>
+      </section>
+      <section class="loop-section">
+        <h2 class="section-title">Essential reading</h2>
+        <div class="section-content">
+          {{> "aside_featured_loop"}}
+        </div>
+      </section>
+      <section class="topics-section">
+        <h2 class="section-title">Topics</h2>
+        <div class="section-content">
+          {{#get "tags" limit="all" order="name asc" include="count.posts"}}
+          {{#foreach tags}}
+          <p><a href="{{url}}">{{name}} ({{count.posts}})</a></p>
+          {{/foreach}}
+          {{/get}}
+        </div>
+      </section>
+      <section class="loop-section">
+        <h2 class="section-title">Daily running log</h2>
+        <div class="section-content overflow-loop-content">
+          {{> "aside_daily_loop"}}
+        </div>
+      </section>
 
-  </aside>
+    </aside>

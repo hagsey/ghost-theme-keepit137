@@ -1,7 +1,7 @@
 {{#get "posts" filter="featured:true"}}
 {{#foreach posts}}
 <div class="post-preview-area">
-  <div class="content-preview-image" style="background-image: url('{{image}}')" /></div>
+  <a href={{url}}><div class="content-preview-image" style="background-image: url('{{image}}')" /></div></a>
   <div class="content-preview-area">
     <a class="post-title" href="{{url}}">{{title}}</a>
     <time class="blog-post-date month" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</time>
