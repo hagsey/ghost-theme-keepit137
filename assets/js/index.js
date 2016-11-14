@@ -26,42 +26,32 @@
   })
   .css("display", "none");
 
+    var blog_main = $(".blog-content main"),
+    blog_aside = $(".blog-content aside");
+
+  $(".content-toggle-buttons").on("click", ".toggle-button", function() {
+    var $this = $(this),
+    button = $this.attr("name"),
+    both_buttons = $(".content-toggle-buttons .toggle-button");
+
+    both_buttons.removeClass("active-toggle");
+    $this.addClass("active-toggle");
+
+    if (button === 'content-button') {
+      blog_main.show();
+      blog_aside.hide();
+    } else {
+      blog_main.hide();
+      blog_aside.show();
+    }
+
+  });
 
 
-
-  //Replace subscribe text in footer
-
-  // (function() {
-  //   var $topics_bar = $("#topics-bar"),
-  //   $all_topics = $(".all-topics"),
-  //   $tag_header = $(".tag-header"),
-  //   $tag_title = $(".tag-title") || "";
-
-  //   $(window).scroll(function() {
-  //     if ($(document).scrollTop() > 430) {
-  //       $topics_bar.addClass('fixed-topic-bar');
-  //       $all_topics.addClass('fixed-topics');
-  //     } else {
-  //       $topics_bar.removeClass('fixed-topic-bar');
-  //       $all_topics.removeClass('fixed-topics');
-  //     }
-  //   });
-  // })();
-
-  // $("#topics-title").off().on("click", function() {
-  //   $(".all-topics").slideToggle(200);
-  //   $("#topics-title i").toggleClass("fa-minus-square");
-  //   $(".clear-modal-layer").toggle();
-
-  //   $(".clear-modal-layer").off().on("click", function() {
-  //     $(".all-topics").slideUp(200);
-  //     $("#topics-title i").removeClass("fa-minus-square");
-  //     $(".clear-modal-layer").hide();
-  //   });
-  // });
-
-  // if ($("#tag-page").length === 1) {
-  //   $(window).scrollTop(430);
-  // }
-
+  window.onresize = function() {
+    if ($(window).width() > 595) {
+      blog_main.show();
+      blog_aside.show();
+    }
+  }
 

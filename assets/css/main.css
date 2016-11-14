@@ -2495,12 +2495,11 @@ NAV BAR
   font-weight: 400;
   text-transform: uppercase;
   font-size: 2em; }
+  .site-title span {
+    color: #e8ff00; }
 
 .site-title, .sub-title {
   line-height: 1em; }
-
-span {
-  color: #e8ff00; }
 
 .sub-title {
   font-family: "Roboto Condensed", Serif;
@@ -2818,7 +2817,8 @@ BLOG LOOP
   float: left; }
 .blog-content aside {
   width: 30%;
-  float: right; }
+  float: right;
+  background: white; }
 .blog-content .post-preview-area {
   margin: 0 auto 2em auto;
   padding-bottom: 2em;
@@ -2861,6 +2861,25 @@ BLOG LOOP
     font-size: 1em; }
   .pagination-container a {
     color: #03a9f4; }
+
+.aside-toggle .shape,
+.aside-toggle .line {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 10px;
+  background: red; }
+.aside-toggle .shape {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid red; }
 
 /*
 ================
@@ -2912,7 +2931,7 @@ i.site-title {
 .loop-section .overflow-loop-content {
   max-height: 300px;
   overflow: scroll; }
-.loop-section .content-preview-image {
+.loop-section div.content-preview-image {
   height: 60px;
   width: 60px;
   display: inline-block;
@@ -3143,106 +3162,39 @@ BREAK POINTS
   .container {
     width: 95%; } }
 @media (max-width: 768px) {
-  .main-page-header {
-    padding: 0.5em 0 0 0; }
+  .page-content {
+    font-size: 0.92em; }
 
-  .hero-image {
-    margin-left: 0.1em;
-    width: 200px; }
-
-  h1, h2 {
-    font-size: 2em; }
-
-  h3 {
-    font-size: 1.8em; }
-
-  .right-side-header {
-    display: none; }
-
-  .blog-content .post-preview-area {
-    height: 175px; }
   .blog-content .content-preview-image {
-    min-width: 175px; } }
-@media (max-width: 600px) {
-  .blog-content .post-preview-area {
-    height: 175px; }
-    .blog-content .post-preview-area .post-title {
-      font-size: 1.5em; }
-    .blog-content .post-preview-area .content-preview-image {
-      min-width: 150px; } }
-@media (max-width: 540px) {
-  .hero-content p {
-    font-size: 0.9em;
-    line-height: 1.25em; }
+    height: 300px; } }
+@media (max-width: 595px) {
+  .blog-content {
+    margin-top: 100px; }
 
-  .hero-image {
-    width: 175px; }
+  .blog-content main,
+  .blog-content aside {
+    width: 100%;
+    float: none; }
 
-  .hero-subscribe #mce-EMAIL {
-    width: 175px; }
+  .blog-content main {
+    display: block; }
 
-  .fixed-topic-bar {
-    left: initial;
-    right: 0;
-    transform: none; }
-    .fixed-topic-bar #topics-title {
-      font-size: 1.3em; }
-
-  .blog-content .post-preview-area {
-    height: 150px; }
-    .blog-content .post-preview-area .post-title {
-      font-size: 1.3em; }
-    .blog-content .post-preview-area .meta-description,
-    .blog-content .post-preview-area .blog-post-date {
-      font-size: 0.9em; }
-    .blog-content .post-preview-area .content-preview-area {
-      width: calc(100% - 160px); } }
-@media (max-width: 499px) {
-  .blog-content .post-preview-area .post-title {
-    font-size: 1.1em; }
-  .blog-content .post-preview-area .content-preview-area {
-    padding: 0; }
-
-  .all-topics a,
-  .preview-tags a {
-    font-size: 0.7em; } }
-@media (max-width: 460px) {
-  input#mce-EMAIL {
-    width: 250px; } }
-@media (max-width: 392px) {
-  .hero-signature {
+  .blog-content aside {
     display: none; }
 
-  .hero-subscribe {
+  .content-toggle-buttons {
+    display: block;
+    margin: 0 auto;
+    position: fixed;
+    top: 80px;
     width: 100%; }
-
-  .hero-image {
-    width: 150px; }
-
-  .hero-content p {
-    font-size: 0.8em;
-    line-height: 1.25em;
-    margin-bottom: 0.7em; }
-
-  .blog-content .post-preview-area {
-    margin-bottom: 0;
-    height: auto; }
-    .blog-content .post-preview-area .post-title {
-      margin-top: 0.3em; }
-    .blog-content .post-preview-area .content-preview-image {
-      min-width: 100%;
-      height: 200px;
-      width: 100%; }
-    .blog-content .post-preview-area .content-preview-area {
-      width: 100%; }
-    .blog-content .post-preview-area .meta-description,
-    .blog-content .post-preview-area .blog-post-date {
-      font-size: 0.8em; } }
-@media (max-width: 342px) {
-  input#mce-EMAIL {
-    width: 200px; }
-
-  .blog-content .post-preview-area .meta-description {
-    display: none; } }
+    .content-toggle-buttons .toggle-button {
+      cursor: pointer;
+      text-align: center;
+      padding: 5px 0;
+      box-sizing: border-box;
+      background: #ebebeb; }
+    .content-toggle-buttons .active-toggle {
+      background: #b7b7b7; } }
 
 /*# sourceMappingURL=main.css.map */

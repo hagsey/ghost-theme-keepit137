@@ -1,6 +1,14 @@
 {{!< default}}
 
 <div name="blog" id="main-page" class="page">
+  <div class="content-toggle-buttons row" hidden>
+    <div name="content-button" class="toggle-button col-2 active-toggle">
+      <h4>Posts</h4>
+    </div>
+    <div name="sidebar-button" class="toggle-button col-2">
+      <h4>Side bar</h4>
+    </div>
+  </div>
   <div class="page-content blog-content clearfix container">
     {{> "blog_loop"}}
   </div>
