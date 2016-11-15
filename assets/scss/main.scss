@@ -108,8 +108,11 @@ li {
 ul, ol {
   margin: 1.5em 0 1.5em 1em;
 }
+a {
+  color: $color-link;
+}
 p {
-  margin-bottom: 25px;
+  margin-bottom: 1.5em;
 }
 .rotate90 {
   transform: rotate(-90deg);
@@ -165,6 +168,7 @@ NAV BAR
   }
 }
 .site-title, .sub-title {
+  color: $color-light;
   line-height: 1em;
 }
 .sub-title {
@@ -221,7 +225,16 @@ NAV BAR
 .footer-navigation a:hover {
   border-bottom-color: $color-highlight;
 }
-
+.hamburger {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: 1em;
+  top: 1em;
+  background: transparent url(../images/hamburger-white.png) no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
 /*
 ================
 SUBSCRIBE
@@ -298,6 +311,9 @@ PAGE SETTINGS
 .page-content {
   margin-top: $nav-bar-height;
   padding-top: 1em;
+  h1, h2, h3, h4 {
+    margin-bottom: 0.5em;
+  }
 }
 /*
 ===================
@@ -385,15 +401,18 @@ MAIN PAGE
 START PAGE
 =================
 */
-.hero-image {
+.img-right-250 {
   float: right;
   width: 250px;
   margin-left: 1em;
 }
+.img-full-width {
+  width: 100%;
+}
 .header-social {
   display: block;
   width: 300px;
-  margin: 0 auto;
+  margin: 0 auto 1em auto;
   position: relative;
   a {
     height: 25px;
@@ -447,7 +466,6 @@ ABOUT PAGE
 =================
 */
 .about-content {
-  h2 {margin-bottom: 1em;}
 
   img {
     float: right;
@@ -536,6 +554,7 @@ BLOG LOOP
     height: 400px;
     background-size: cover;
     margin-bottom: 1em;
+    background-position: center;
   }
   .meta-description,
   .blog-post-date {
@@ -625,6 +644,7 @@ aside .section-content {
 i.site-title {
   font-size: 1em;
   font-style: normal;
+  color: $color-bg-gray;
 }
 .start-here-button {
   background: #eaeaea;
@@ -638,7 +658,7 @@ i.site-title {
     margin: 0;
     margin-bottom: 0.8em;
   }
-  h4{
+  h4 {
     color: $color-bg-gray;
     line-height: 1.2em;
   }
@@ -685,10 +705,6 @@ POST PAGE
 ================
 */
 #post-page {
-  .post-title {
-    text-align: center;
-    margin: 0.5em 0;
-  }
 }
 .post-content-container {
   width: 70%;
@@ -702,6 +718,10 @@ POST PAGE
   }
   .featured-image {
     width: 100%;
+  }
+  .post-title {
+    text-align: center;
+    margin: 0.5em 0;
   }
 }
 .post-content {
@@ -760,8 +780,6 @@ POST PAGE
 .post-tags {
   a {
     padding: 0.5em;
-    font-size: 0.8em;
-    border-radius: 3px;
     text-transform: capitalize;
   }
 }
@@ -864,13 +882,14 @@ FOOTER
 .site-footer-wrapper {
   background: $color-bg-gray;
   padding: 30px 0;
-  .footer-column-title {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 1em;
-    font-size: 2em;
-    font-family: $font-header;
-  }
+
+}
+.footer-column-title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 2em;
+  font-family: $font-header;
 }
 .footer-social {
   .email-arrow {display: none;}
@@ -947,7 +966,8 @@ BREAK POINTS
   }
 }
 @media (max-width: 768px) {
-  .page-content {
+  .page-content,
+  .site-footer-wrapper {
     font-size: 0.92em;
   }
   .blog-content .content-preview-image {
@@ -963,6 +983,9 @@ BREAK POINTS
     width: 100%;
     float: none;
   }
+  .nav-bar-wrapper {
+    box-shadow: none;
+  }
   .blog-content main {
     display: block;
   }
@@ -974,6 +997,7 @@ BREAK POINTS
     margin: 0 auto;
     position: fixed;
     top: $nav-bar-height;
+    box-shadow: 0 2px 3px 0px #6b6b6b;
     width: 100%;
     .toggle-button {
       cursor: pointer;
@@ -983,7 +1007,70 @@ BREAK POINTS
       background: $color-gray;
     }
     .active-toggle {
-      background: #b7b7b7;
+      background: $color-highlight-2;
     }
+  }
+  .right-side-header {
+    display: none;
+    right: 0;
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    background: #909090;
+    box-sizing: border-box;
+    transform: none;
+    margin: 0;
+    box-shadow: 0 2px 3px 0px #6b6b6b;
+
+    .nav-bar-links li {
+      display: block;
+      margin: 1em 0;
+      text-align: center;
+    }
+  }
+  .hamburger {
+    display: block;
+  }
+  .post-content-container {
+    .post-title {
+      margin-top: 0;
+    }
+    .post-meta {
+      margin-bottom: 0;
+    }
+  }
+}
+@media (max-width: 440px) {
+  h1 {
+    font-size: 2.2em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  .footer-column-title {
+    font-size: 1.5em;
+  }
+  input#mce-EMAIL {
+    width: 200px;
+  }
+  .footer-social {
+    a {
+      overflow: hidden;
+      text-indent: -9999px;
+    }
+    a:before {
+      text-indent: 0;
+      float: left;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .blog-content .content-preview-image {
+    height: 250px;
+  }
+}
+@media (max-width: 330px) {
+  .blog-content .content-preview-image {
+    height: 200px;
   }
 }

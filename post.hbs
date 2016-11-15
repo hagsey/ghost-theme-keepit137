@@ -9,7 +9,7 @@
           <div class="post-meta">
             <p class="author">By Eric Hagemann</p>
              <p class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</p>
-            <p class="post-tags">In {{tags limit="3" separator=" "}}</p>
+            <p class="post-tags">In {{tags separator=" | "}}</p>
           </div>
          {{#if image}}<img class="featured-image" src="{{image}}" />{{/if}}
         {{> "share"}}

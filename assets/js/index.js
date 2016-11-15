@@ -47,7 +47,6 @@
 
   });
 
-
   window.onresize = function() {
     if ($(window).width() > 595) {
       blog_main.show();
@@ -55,3 +54,8 @@
     }
   }
 
+  //Hamburger
+
+  $(".hamburger").on("click", function() {
+    $(".right-side-header").slideToggle(200);
+  });
