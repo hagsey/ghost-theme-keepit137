@@ -1,17 +1,21 @@
 {{!< default}}
 
 
-<div name="blog" id="tag-page" class="page">
-  <div class="main-page-header">
-    {{> "hero_header"}}
+<div name="blog" class="page tag-page">
+  <div class="content-toggle-buttons row" hidden>
+    <div name="content-button" class="toggle-button col-2 active-toggle">
+      <h4>Posts</h4>
+    </div>
+    <div name="sidebar-button" class="toggle-button col-2">
+      <h4>Side bar</h4>
+    </div>
   </div>
-  {{> "topics_bar"}}
-  <div class="page-content blog-content container">
-    <header class="tag-header">
-      {{#tag}}
-      <h3 class="tag-title">{{name}}</h3>
-      {{/tag}}
-    </header>
+  <div class="page-content blog-content clearfix container">
+    {{#tag}}
+    <div class="tag-header">
+    <h2 class="tag-title">{{name}}</h2>
+    </div>
+    {{/tag}}
     {{> "blog_loop"}}
   </div>
 </div>

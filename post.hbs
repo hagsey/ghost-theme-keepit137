@@ -2,20 +2,20 @@
 
 
 {{#post}}
-  <div name="blog" id="post-page" class="page blog-page">
-    <div class="page-content">
-      <div class="post-content-container container">
-        <h1 class="post-title">{{title}}</h1>
-          <div class="post-meta">
-            <p class="author">By Eric Hagemann</p>
-             <p class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</p>
-            <p class="post-tags">In {{tags separator=" | "}}</p>
-          </div>
-         {{#if image}}<img class="featured-image" src="{{image}}" />{{/if}}
-        {{> "share"}}
-        <div class="post-content">{{content}}</div>
-        {{> "share"}}
+<div name="blog" id="post-page" class="page blog-page">
+  <div class="page-content">
+    <div class="post-content-container container">
+      <h1 class="post-title">{{title}}</h1>
+      <div class="post-meta">
+        <p class="author">By Eric Hagemann</p>
+        <p class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</p>
+        <p class="post-tags">In {{tags separator=" | "}}</p>
       </div>
+      {{#if image}}<img class="featured-image" src="{{image}}" />{{/if}}
+      {{> "share"}}
+      <div class="post-content">{{content}}</div>
+      {{> "share"}}
+    </div>
 
       {{!-- <div class="author-content-wrapper">
         <div class="author-content">
@@ -27,8 +27,8 @@
           </div>
         </div>
       </div> --}}
-        {{> "email_subscribe_bar"}}
     </div>
+    {{> "email_subscribe_bar"}}
   </div>
 
-{{/post}}
+  {{/post}}

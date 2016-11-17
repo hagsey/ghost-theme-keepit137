@@ -309,8 +309,10 @@ PAGE SETTINGS
   background: #ffffff;
 }
 .page-content {
-  margin-top: $nav-bar-height;
+  margin: 0 auto;
   padding-top: 1em;
+  max-width: 1000px;
+  margin-top: $nav-bar-height;
   h1, h2, h3, h4 {
     margin-bottom: 0.5em;
   }
@@ -615,6 +617,23 @@ BLOG LOOP
     border-right:15px solid red;
   }
 }
+
+/*
+================
+TAG PAGE
+================
+*/
+.tag-page {
+  .blog-content {
+    .content-preview-image {
+      width: 200px;
+      margin-right: 1em;
+      float: left;
+      height: 150px;
+    }
+  }
+}
+
 /*
 ================
 ASIDE
@@ -639,7 +658,7 @@ aside section {
   margin-bottom: 2em;
 }
 aside .section-content {
-  padding-left: 0.5em;
+  padding: 0.5em;
 }
 i.site-title {
   font-size: 1em;
@@ -672,10 +691,10 @@ i.site-title {
     padding: 0.3em;
   }
   .overflow-loop-content {
-    max-height: 300px;
-    overflow: scroll;
+    max-height: 600px;
+    overflow-y: scroll;
   }
-  div.content-preview-image {
+  .content-preview-image.loop-image {
     height: 60px;
     width: 60px;
     display: inline-block;
@@ -707,7 +726,7 @@ POST PAGE
 #post-page {
 }
 .post-content-container {
-  width: 70%;
+  width: 80%;
   max-width: 1000px;
   a {
     color: $color-link;
@@ -800,6 +819,7 @@ TAG
     text-transform: capitalize;
     font-size: 1.1em;
     display: inline-block;
+    margin: 0;
   }
 }
 

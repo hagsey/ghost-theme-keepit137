@@ -21,10 +21,10 @@
 
   //Hide posts with tag 'daily-log'
 
-  $("#main-page main .post-preview-area").filter(function(i) {
-    return $(this).attr('data-tags').split(' ').indexOf('daily-log') !== -1;
-  })
-  .css("display", "none");
+  // $("#main-page main .post-preview-area").filter(function(i) {
+  //   return $(this).attr('data-tags').split(' ').indexOf('daily-log') !== -1;
+  // })
+  // .css("display", "none");
 
     var blog_main = $(".blog-content main"),
     blog_aside = $(".blog-content aside");

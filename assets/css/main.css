@@ -2640,8 +2640,10 @@ PAGE SETTINGS
   background: #ffffff; }
 
 .page-content {
-  margin-top: 80px;
-  padding-top: 1em; }
+  margin: 0 auto;
+  padding-top: 1em;
+  max-width: 1000px;
+  margin-top: 80px; }
   .page-content h1, .page-content h2, .page-content h3, .page-content h4 {
     margin-bottom: 0.5em; }
 
@@ -2901,6 +2903,17 @@ BLOG LOOP
 
 /*
 ================
+TAG PAGE
+================
+*/
+.tag-page .blog-content .content-preview-image {
+  width: 200px;
+  margin-right: 1em;
+  float: left;
+  height: 150px; }
+
+/*
+================
 ASIDE
 ================
 */
@@ -2920,7 +2933,7 @@ aside section {
   margin-bottom: 2em; }
 
 aside .section-content {
-  padding-left: 0.5em; }
+  padding: 0.5em; }
 
 i.site-title {
   font-size: 1em;
@@ -2948,9 +2961,9 @@ i.site-title {
   border-bottom: 1px solid #ebebeb;
   padding: 0.3em; }
 .loop-section .overflow-loop-content {
-  max-height: 300px;
-  overflow: scroll; }
-.loop-section div.content-preview-image {
+  max-height: 600px;
+  overflow-y: scroll; }
+.loop-section .content-preview-image.loop-image {
   height: 60px;
   width: 60px;
   display: inline-block;
@@ -2974,7 +2987,7 @@ POST PAGE
 ================
 */
 .post-content-container {
-  width: 70%;
+  width: 80%;
   max-width: 1000px; }
   .post-content-container a {
     color: #03a9f4;
@@ -3053,7 +3066,8 @@ TAG
     border-radius: 4px;
     text-transform: capitalize;
     font-size: 1.1em;
-    display: inline-block; }
+    display: inline-block;
+    margin: 0; }
 
 /*
 ================
